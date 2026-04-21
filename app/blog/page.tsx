@@ -33,9 +33,9 @@ export default async function BlogPage() {
                         <li key={post.id} className="border rounded p-4 bg-white">
                             <h2 className="text-2xl font-semibold text-slate-900">{post.title}</h2>
                             <p className="mt-1 text-slate-600">{post.body}</p>
-                            {/* <Link href={`/blog/${post.id}`} className="mt-2 inline-block text-blue-500 hover:underline">
+                            <Link href={`/blog/${post.id}`} className="mt-2 inline-block text-blue-500 hover:underline">
                                 Read more
-                            </Link> */}
+                            </Link>
                         </li>
                     ))}
                 </ul>
