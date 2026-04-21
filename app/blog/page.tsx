@@ -1,4 +1,5 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+import SearchBox from './search-box';
 
 interface Post {
     userId: number;
@@ -27,10 +28,14 @@ export default async function BlogPage() {
             <div className="mx-auto max-w-2xl">
                 <h1 className="text-4xl font-bold text-slate-900">Blog</h1>
                 <p className="mt-2 text-slate-600">
-                    {posts.length} posts fetched from JSONPlaceholder API.
+                    Filter client-side dengan SearchBox di bawah ini:
                 </p>
 
-                <ul className="mt-4 space-y-4">
+                <div className='mt-6'>
+                    <SearchBox posts={posts} />
+                </div>
+
+                {/* <ul className="mt-4 space-y-4">
                     {posts.slice(0,10).map((post) => (
                         <li key={post.id} className="border rounded p-4 bg-white">
                             <h2 className="text-2xl font-semibold text-slate-900">{post.title}</h2>
@@ -40,7 +45,7 @@ export default async function BlogPage() {
                             </Link>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
             </div>
         </main>
     );
