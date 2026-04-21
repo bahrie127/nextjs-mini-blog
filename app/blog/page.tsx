@@ -8,6 +8,8 @@ interface Post {
 }
 
 async function getPosts(): Promise<Post[]> {
+    // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate network delay
+    // throw new Error('Failed to fetch posts');
     const res = await fetch('https://jsonplaceholder.typicode.com/posts',{
         next: {revalidate: 60},
     });
