@@ -30,6 +30,9 @@ export default function RootLayout({
               <Link href="/about" className="hover:text-slate-900">
                 About
               </Link>
+              <Link href='/notes' className='hover:text-slate-900'>
+                Notes
+              </Link>
             </div>
           </div>
         </nav>
